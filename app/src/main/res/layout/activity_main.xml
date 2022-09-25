@@ -151,6 +151,9 @@
         app:layout_constraintTop_toBottomOf="@+id/img_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:textSize="19dp"
+        android:textColor="@color/black"
         android:text="APP SUIT CHALLENGE"/>
     <TextView
         android:id="@+id/tv_winner"
