@@ -62,17 +62,14 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:onClick="rock"
             android:src="@drawable/rock"/>
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:onClick="paper"
             android:src="@drawable/paper"/>
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:onClick="scissors"
             android:src="@drawable/scissors"/>
     </LinearLayout>
 
