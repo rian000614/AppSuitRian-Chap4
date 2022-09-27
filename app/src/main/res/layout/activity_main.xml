@@ -21,29 +21,26 @@
         app:layout_constraintTop_toTopOf="parent"
         android:orientation="vertical">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PLAYER 1"
-            android:layout_marginLeft="20dp"/>
+            android:src="@drawable/ic_player1"
+            android:layout_marginLeft="10dp"/>
 
         <ImageView
             android:id="@+id/img_rock"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:onClick="rock"
             android:src="@drawable/rock"/>
         <ImageView
             android:id="@+id/img_paper"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:onClick="paper"
             android:src="@drawable/paper"/>
         <ImageView
             android:id="@+id/img_scissors"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:onClick="scissors"
             android:src="@drawable/scissors"/>
     </LinearLayout>
 
@@ -56,11 +53,11 @@
         app:layout_constraintTop_toTopOf="parent"
         android:orientation="vertical">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="COMPUTER"
-            android:layout_marginRight="20dp"/>
+            android:src="@drawable/ic_com"
+            android:layout_marginRight="10dp"/>
 
         <ImageView
             android:layout_width="100dp"
@@ -79,52 +76,7 @@
             android:src="@drawable/scissors"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll_player"
-        app:layout_constraintVertical_bias="0.113"
-        tools:layout_editor_absoluteX="0dp">
 
-        <TextView
-            android:id="@+id/tv_pl_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="Player Score"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/player_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="0"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="Computer Score"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/computer_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="0"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-    </LinearLayout>
     <ImageView
         android:id="@+id/img_top"
         android:layout_width="200dp"
@@ -155,15 +107,12 @@
         android:textSize="19dp"
         android:textColor="@color/black"
         android:text="APP SUIT CHALLENGE"/>
-    <TextView
+    <ImageView
         android:id="@+id/tv_winner"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="VS"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:src="@drawable/ic_vs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ll_computer"
         app:layout_constraintStart_toEndOf="@+id/ll_player"
