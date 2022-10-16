@@ -1,57 +1,55 @@
 package com.example.appsuitrian_chap4
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.appsuitrian_chap4.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
-    lateinit var rockImageView: ImageView
-    lateinit var scissorsImageView: ImageView
-    lateinit var paperImageView: ImageView
-    lateinit var resultImageView: ImageView
-    lateinit var refreshImageView: ImageView
-
-    private fun initComponents(){
-        rockImageView = findViewById(R.id.img_rock)
-        scissorsImageView = findViewById(R.id.img_scissors)
-        paperImageView = findViewById(R.id.img_paper)
-        resultImageView = findViewById(R.id.img_result)
-        refreshImageView = findViewById(R.id.img_refresh)
+    private val binding : ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private fun initListeners(){
-        rockImageView.setOnClickListener{ startGame("ROCK")}
-        scissorsImageView.setOnClickListener{ startGame("SCISSORS")}
-        paperImageView.setOnClickListener{ startGame("PAPER")}
+    private fun initListeners() {
+        binding.imgRock.setOnClickListener { startGame("ROCK") }
+        binding.imgScissors.setOnClickListener { startGame("SCISSORS") }
+        binding.imgPaper.setOnClickListener { startGame("PAPER") }
+        binding.imgResult.setImageResource(R.drawable.ic_vs)
 
-        refreshImageView.setOnClickListener {
-            rockImageView.setOnClickListener{ startGame("ROCK")}
-            scissorsImageView.setOnClickListener{ startGame("SCISSORS")}
-            paperImageView.setOnClickListener{ startGame("PAPER")}
-            resultImageView.setImageResource(R.drawable.ic_vs)
+
+    }
+    fun refreshGame(){
+        binding.imgRefresh.setOnClickListener {
+            initListeners()
         }
     }
 
-    private fun startGame(option: String){
+    private fun startGame(option: String) {
         val computerOption = GameSuit.picRandomOption()
-        when{
-            GameSuit.isDraw(option, computerOption)-> resultImageView.setImageResource(R.drawable.ic_draw)
-            GameSuit.isWin(option, computerOption)-> resultImageView.setImageResource(R.drawable.ic_p1win)
-            else -> resultImageView.setImageResource((R.drawable.ic_p2win))
+        when {
+            GameSuit.isDraw(option, computerOption) -> binding.imgResult.setImageResource(R.drawable.ic_draw)
+            GameSuit.isWin(option, computerOption) -> binding.imgResult.setImageResource(R.drawable.ic_p1win)
+            else -> binding.imgResult.setImageResource((R.drawable.ic_p2win))
         }
     }
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        initComponents()
+        setContentView(binding.root)
+        refreshGame()
         initListeners()
+    }
+
+    companion object {
+        private const val EXTRAS_MULTIPLAYER_MODE = "EXTRAS_MULTIPLAYER_MODE"
+
+        fun startActivity(context: Context, isUsingMultiplayerMode: Boolean) {
+            context.startActivity(Intent(context, MainActivity::class.java) .apply {
+                putExtra(EXTRAS_MULTIPLAYER_MODE, isUsingMultiplayerMode)
+            })
+        }
     }
 }

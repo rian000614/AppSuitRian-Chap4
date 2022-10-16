@@ -23,11 +23,13 @@ object GameSuit {
 
     fun picRandomOption(): String = options[Random.nextInt(0,3)]
 
-    fun pickDrawable(option: String): Int = optionDrawable[option]!!
+    //fun pickDrawable(option: String): Int = optionDrawable[option]!!
 
     fun isDraw(from: String, to: String): Boolean = from == to
 
     fun isWin(from: String, to: String): Boolean = rules["$from-$to"]!!
+
+    fun isWin2(from: String, to: String): Boolean = rules["$from-$to"]!!
 
 
 }

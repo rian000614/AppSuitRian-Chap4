@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AppSuitRian-Chap4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="input_your_name">Input Your Name</string>
+    <string name="title_satu">Selamat Datang Di Game Suit</string>
+    <string name="desc_satu">Anda bisa bermain dengan sesama player</string>
+    <string name="desc_dua">Anda juga bisa melawan komputer</string>
+    <string name="rian_vs_computer">Rian VS Computer</string>
+    <string name="rian_vs_player">Rian Vs Player</string>
+    <string name="placeholder_title_menu_game">Hi %s ! \n Pilih lah lawan Mu ?</string>
 </resources>

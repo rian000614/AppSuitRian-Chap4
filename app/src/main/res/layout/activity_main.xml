@@ -60,17 +60,20 @@
             android:layout_marginRight="10dp"/>
 
         <ImageView
+            android:id="@+id/img_rock_right"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/rock"/>
+            android:src="@drawable/rock_right"/>
         <ImageView
+            android:id="@+id/img_paper_right"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/paper"/>
+            android:src="@drawable/paper_right"/>
         <ImageView
+            android:id="@+id/img_scissors_right"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/scissors"/>
+            android:src="@drawable/scissors_right"/>
     </LinearLayout>
 
 
