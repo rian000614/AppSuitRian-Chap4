@@ -9,4 +9,8 @@
     <string name="rian_vs_computer">Rian VS Computer</string>
     <string name="rian_vs_player">Rian Vs Player</string>
     <string name="placeholder_title_menu_game">Hi %s ! \n Pilih lah lawan Mu ?</string>
+    <string name="dialog_back_menu">Menu Utama</string>
+    <string name="start">iya</string>
+    <string name="dialog_start_game">uhuy</string>
+    <string name="cancel">tidak</string>
 </resources>

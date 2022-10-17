@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import com.example.appsuitrian_chap4.Intro.OnFinishNavigateListener
-import com.example.appsuitrian_chap4.R
 import com.example.appsuitrian_chap4.databinding.FragmentInputPlayerNameBinding
 import com.example.appsuitrian_chap4.menu.MenuGame
 
@@ -21,7 +19,6 @@ class InputPlayerName :  Fragment(), OnFinishNavigateListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentInputPlayerNameBinding.inflate(inflater, container, false)
         return binding.root
     }

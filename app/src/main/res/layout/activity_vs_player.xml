@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".computer.MainActivity">
+    tools:context=".player.VsPlayer">
 
     <ImageView
         android:layout_width="match_parent"
@@ -53,10 +53,13 @@
         app:layout_constraintTop_toTopOf="parent"
         android:orientation="vertical">
 
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_com"
+            android:text="Pemain 2"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"
             android:layout_marginRight="10dp"/>
 
         <ImageView

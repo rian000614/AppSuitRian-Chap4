@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.appsuitrian_chap4">
+    package="com.example.appsuitrian_chap4" >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +14,13 @@
         android:roundIcon="@mipmap/ic_suit_launcer_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppSuitRianChap4"
-        tools:targetApi="31">
-
+        tools:targetApi="31" >
+        <activity
+            android:name=".VsPlayer"
+            android:exported="false" />
         <activity
             android:name=".Intro.SplashActicity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,12 +29,12 @@
         </activity>
         <activity
             android:name=".Intro.OnboardingActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".menu.MenuGame"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".computer.MainActivity"
             android:exported="false" />
     </application>
 
